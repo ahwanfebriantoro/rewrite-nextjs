@@ -1,29 +1,35 @@
 module.exports = {
   async rewrites() {
     return [
+      { source: '/:path*', destination: '/:path*' },
       {
-        source: '/team',
-        destination: '/about',
+        source: '/event',
+        destination: 'https://www.beyondrun.com/event'
       },
       {
-        source: '/about-us',
-        destination: '/about',
+        source: '/terms-and-conditions',
+        destination: 'https://www.beyondrun.com/terms-and-conditions'
       },
-      // Path Matching - will match `/post/a` but not `/post/a/b`
       {
-        source: '/post/:slug',
-        destination: '/news/:slug',
+        source: '/blog/:id',
+        destination: 'https://www.beyondrun.com/blog/:id'
       },
-      // Wildcard Path Matching - will match `/blog/a` and `/blog/a/b`
       {
-        source: '/blog/:slug*',
-        destination: '/news/:slug*',
+        source: '/static/js/:chunkjs',
+        destination: 'https://www.beyondrun.com/static/js/:chunkjs'
       },
-      // Rewriting to an external URL
       {
-        source: '/docs/:slug',
-        destination: 'http://example.com/docs/:slug',
+        source: '/static/css/:chunkcss',
+        destination: 'https://www.beyondrun.com/static/css/:chunkcss'
       },
-    ]
-  },
-}
+      {
+        source: '/fonts/:fonts*',
+        destination: 'https://www.beyondrun.com/fonts/:fonts*'
+      },
+      {
+        source: '/img/:img*',
+        destination: 'https://www.beyondrun.com/img/:img*'
+      }
+    ];
+  }
+};

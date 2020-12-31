@@ -1,7 +1,7 @@
-import styles from '../styles.module.css'
-import Link from 'next/link'
+import styles from '../styles.module.css';
+import Link from 'next/link';
 
-const Code = (p) => <code className={styles.inlineCode} {...p} />
+const Code = (p) => <code className={styles.inlineCode} {...p} />;
 
 const Index = () => (
   <div className={styles.container}>
@@ -18,27 +18,13 @@ const Index = () => (
       <nav>
         <ul className={styles.list}>
           <li>
-            <Link href="/about" as="/team">
-              <a>Visit /team</a>
-            </Link>
+            <a href="/terms-and-conditions">Visit External term and conditions</a>
           </li>
           <li>
-            <Link href="/about" as="/about-us">
-              <a>Visit /about-us</a>
-            </Link>
+            <a href="/blog/2">Visit External blog</a>
           </li>
           <li>
-            <Link href="/post/first-post">
-              <a>Visit /post/first-post</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog/2020/first-post">
-              <a>Visit /blog/2020/first-post</a>
-            </Link>
-          </li>
-          <li>
-            <a href="/docs/page">Visit External URL</a>
+            <a href="/event">Visit External event</a>
           </li>
         </ul>
       </nav>
@@ -49,6 +35,6 @@ const Index = () => (
       <hr className={styles.hr} />
     </div>
   </div>
-)
+);
 
-export default Index
+export default Index;
